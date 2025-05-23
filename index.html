@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reasons I Love You</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="icon-192.png">
 </head>
 <body>
   <!-- Background Video -->
   <video autoplay muted loop class="background-video">
     <source src="background.mp4" type="video/mp4" />
+    <!-- Fallback image for browsers that can't play video -->
+    <img src="background.jpg" alt="Romantic background" class="background-image" />
     Your browser does not support the video tag.
   </video>
 
