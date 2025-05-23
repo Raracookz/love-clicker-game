@@ -1,35 +1,59 @@
+/* Make the video cover the whole background */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Center the container content */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    background: #ffe6f0;
-    font-family: 'Segoe UI', sans-serif;
-    text-align: center;
-    padding: 40px;
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  }
-  
-  button {
-    background-color: #ff69b4;
-    color: white;
-    font-size: 24px;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  button:hover {
-    background-color: #ff1493;
-  }
-  
-  #reasonText {
-    font-size: 20px;
-    margin-top: 30px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.2); /* Optional: semi-transparent background */
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.2);
+  text-align: center;
+  color: #fff;
+  backdrop-filter: blur(6px); /* Optional: glass effect */
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif; /* Change font */
+  font-size: 1.5rem; /* Make text larger */
+}
+
+/* Make the heading and button even larger */
+.container h1 {
+  font-size: 2.5rem;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.container button {
+  font-size: 1.3rem;
+  padding: 0.7em 2em;
+  border-radius: 12px;
+  border: none;
+  background: #ff69b4;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+}
