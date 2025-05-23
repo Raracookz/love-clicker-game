@@ -1,14 +1,28 @@
-/* Make the video cover the whole background */
+/* Default: show video, hide image */
 .background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100vw;
-  min-height: 100vh;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
+  display: block;
+}
+.background-fallback {
+  display: none;
+}
+
+/* iOS detection using CSS media query hack */
+@supports (-webkit-touch-callout: none) {
+  .background-video {
+    display: none !important;
+  }
+  .background-fallback {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
 }
 
 /* Center the container content */
