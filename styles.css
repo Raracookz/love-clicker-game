@@ -23,15 +23,15 @@ body {
 .container {
   position: relative;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.2); /* Optional: semi-transparent background */
+  background: rgba(0, 0, 0, 0.35); /* Darker for readability */
   padding: 2rem 3rem;
   border-radius: 20px;
   box-shadow: 0 4px 32px rgba(0,0,0,0.2);
   text-align: center;
   color: #fff;
-  backdrop-filter: blur(6px); /* Optional: glass effect */
-  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif; /* Change font */
-  font-size: 1.5rem; /* Make text larger */
+  backdrop-filter: blur(6px);
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.5rem;
 }
 
 /* Make the heading and button even larger */
@@ -53,30 +53,9 @@ body {
   font-family: inherit;
 }
 
-/* Fallback styles for unsupported video */
-.background-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100vw;
-  min-height: 100vh;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  display: none;
-}
+/* Remove all video and .background-image rules above this line */
 
-/* Show the image if video is not supported or fails */
-.background-video:has(source:invalid), 
-.background-video:has(img) {
-  display: none;
-}
-.background-video img {
-  display: block;
-}
-
-/* Remove video styles and always show the image */
+/* Always show the background image */
 .background-fallback {
   display: block !important;
   position: fixed;
@@ -89,5 +68,3 @@ body {
   object-fit: cover;
   z-index: -1;
 }
-
-/* Remove .background-video and @supports (-webkit-touch-callout: none) rules */
